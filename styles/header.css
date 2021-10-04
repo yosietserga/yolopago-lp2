@@ -1,0 +1,67 @@
+:root {
+  /* fonts families */
+  --font-system: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --monserrat: 'Montserrat', sans-serif;
+  --poppins: 'Poppins', sans-serif;
+
+  /* colors */ 
+  --white:#fff; 
+  --orange: #FF6000;
+  --brand:#7024C6 
+}
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 0px 15px;
+  background: #7024C6;
+  z-index:999;
+}
+.header .nav-item {
+  padding-left: 50px;
+}
+.header .nav-item .btn-warning{
+  margin-top: 10px;
+}
+.header .navbar {
+  padding: 10px 0px;
+  line-height: 50px;
+}
+
+.header.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header.sticky .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  width: 100%;
+  background: #976ce2;
+  box-shadow: 0px 6px 13px 0px rgb(0 0 0 / 6%);
+  opacity: 0;
+  -webkit-animation: fadeInDown 0.95s ease-in-out 0s 1 normal none running;
+  animation: fadeInDown 0.95s ease-in-out 0s 1 normal none running;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+.header .logo {
+  width: 150px !important;
+}
+.header a {
+  color:var(--white) !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size:14px;
+}
+.header .btn-warning {
+  background:var(--orange);
+  box-shadow:0 0 10px rgba(36, 9, 28, 0.4);
+}

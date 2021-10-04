@@ -1,16 +1,618 @@
+:root {
+  /* fonts families */
+  --font-system: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --monserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+
+  /* colors */
+  --white: #fff;
+  --orange: #FF6000;
+  --brand: #7024C6;
+  --altbg:#f4f7fc;
+
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-system);
+  background: #fff;
 }
+* {transition: all .4s ease;}
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1px;
+}
+
 * {
   box-sizing: border-box;
+}
+textarea:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='time']:focus,
+input[type='week']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='color']:focus,
+.uneditable-input:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+}
+
+.section {
+  padding-top: 10px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.ui-image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+.font-monserrat {
+  font-family: var(--monserrat);
+}
+.font-poppins {
+  font-family: var(--poppins);
+}
+.bold {
+  font-weight: bold;
+}
+.gray {
+  color: #666;
+}
+.white {
+  color: #fff;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+}
+.text1 {
+  color: var(--orange) !important;
+  font: bold 28px var(--poppins);
+  margin-bottom: 35px !important;
+  text-shadow: 0 0 2px #fff;
+
+  line-height: 56px;
+}
+.feature-section {
+  padding-top: 100px;
+}
+.feature-section form {
+  background:var(--altbg);
+  box-shadow:-2px 2px 6px rgba(0,0,0,.3);
+  border-radius:10px;
+  padding:10px;
+  max-width:450px;
+  margin:auto;
+}
+.feature-section input {
+  background: transparent;
+  border:none;
+  border-bottom:solid 1px #ccc;
+}
+
+.feature-section h3 {
+  color: var(--brand) !important;
+  text-align: center !important;
+  margin: 20px auto 0;
+  font-weight: 700 !important;
+  font-size: 2.5rem;
+  font-family: var(--monserrat);
+}
+.feature-section .col-md-3 {
+  text-align: center !important;
+}
+.feature-section .text-warning {
+  color: var(--orange) !important;
+  font-weight: bold;
+}
+.sendsms {
+  margin: auto;
+  text-align: center !important;
+}
+.sendsms h5 {
+  color: var(--brand) !important;
+  text-align: center !important;
+  font-weight: 600;
+  font-family: var(--poppins);
+}
+.sendsms p {
+  color: #333 !important;
+  text-align: center !important;
+  font-weight: 600;
+  font-family: var(--poppins);
+}
+.sendsms button {
+  background: var(--brand);
+  border: none !important;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: var(--white);
+  font-weight: bold;
+  clear: both;
+  letter-spacing: 1px;
+  margin: 10px auto;
+}
+.sendsms span {
+  color: var(--brand);
+  font-weight: bold;
+}
+.sendsms input {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px var(--orange);
+  outline: none;
+}
+.modal-content .success {
+  margin: 100px auto 10px;
+  margin-left: 40%;
+  text-align: center;
+  align-items: center !important;
+  max-width: 100px;
+  width: 100px !important;
+  align-content: center;
+}
+.modal-content .fail {
+  margin: 100px auto 10px;
+  margin-left: 40%;
+  text-align: center;
+  align-items: center !important;
+  max-width: 100px;
+  width: 100px !important;
+  align-content: center;
+  background: #900;
+  height: 100px;
+  display: block;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+}
+.modal-content h3 {
+  color: var(--brand);
+  text-align: center;
+  margin: 20px auto 100px;
+}
+
+.flechas {
+  position: absolute !important;
+  width: 200px !important;
+}
+.flecha1 {
+  margin-top: 20px;
+  margin-left: 180px;
+}
+.flecha2 {
+  margin-top: 250px;
+  margin-left: 460px;
+}
+.flecha3 {
+  margin-top: 20px;
+  margin-left: 740px;
+}
+
+.feature2-bg {
+  display: block;
+  width: 100%;
+  height: 800px;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin-top: -5vw;
+  background: var(--white);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 65%);
+  transition: all 1s ease-in;
+}
+.feature2-section h3 {
+  color: var(--brand) !important;
+}
+.feature2-section .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ccc;
+  min-height: 100%;
+  padding: 20px 2px 5px;
+  text-align: center;
+}
+.feature2-section .card img {
+  max-height: 200px;
+}
+.feature2-section .card-title {
+  font: bold 14px var(--monserrat);
+  color: var(--brand);
+
+  font-family: var(--poppins);
+}
+
+#beneficios p {
+  font-family: var(--poppins);
+  color: #666;
+  letter-spacing: 1px;
+}
+.feature2-section .card-desc {
+  font: bold 14px var(--poppins);
+}
+
+.faq-bg {
+  display: block;
+  width: 100%;
+  height: 115%;
+  content: " ";
+  position: absolute;
+  top: -14%;
+  left: 0;
+  z-index: -1;
+  margin-top: -5vw;
+  background: var(--white);
+  clip-path: polygon(0% 26%, 100% 0%, 100% 100%, 0% 100%);
+  transition: all 1s ease-in;
+}
+.faq-section {
+  width: 100%;
+}
+.faq-section .row {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 20% 10%;
+}
+.faq-section button {
+  background: transparent !important;
+  width: 100%;
+  box-shadow: none !important;
+  color: #333 !important;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  padding: 10px 0 0;
+  text-align: left;
+  font: bold 14px var(--poppins);
+}
+.faq-section button small {
+  float: right;
+  color: var(--brand);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 10px;
+}
+.faq-section .card {
+  border: none;
+  border-radius: 0;
+}
+.faq-section hr {
+  border: none;
+  border-bottom: solid 1px#ccc;
+  width: 120%;
+  margin-left: -10%;
+}
+.faq-section h3 {
+  color: var(--brand) !important;
+  text-align: center !important;
+  margin: 20px auto 100px auto;
+
+  letter-spacing: 2px;
+  font-family: var(--monserrat);
+  font-weight: 700;
+}
+
+.hero2-section {
+  padding-bottom: 0;
+}
+.hero2-section p {
+  color: var(--orange) !important;
+  font: bold 28px var(--poppins);
+  margin: auto;
+  text-align: left;
+  vertical-align: bottom;
+}
+.feature-section button,
+.hero2-section button {
+  background: var(--brand);
+  border: none !important;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: var(--white);
+  font-weight: bold;
+  clear: both;
+  letter-spacing: 1px;
+  margin: 10px auto;
+}
+
+.footer {
+  padding-top: 70px;
+  padding-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to right, #7436c7, #af90f4);
+}
+.footer * {
+  color: var(--white) !important;
+}
+.footer .logo {
+  width: 200px !important;
+}
+.footer .facebook {
+  width: 30px !important;
+}
+.footer .logo-marketplaces {
+  text-align: center;
+  align-items: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.footer .logo-market {
+  max-width: 100px !important;
+  margin: 10px;
+}
+.footer h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.footer h6,
+.footer a,
+.footer p {
+  font-size: 0.8rem;
+}
+
+.yoli {
+  position: fixed;
+  z-index: 99;
+  bottom: 50px;
+  right: 100px;
+}
+.yoli * {
+  font-family: var(--monserrat);
+  transition: all 0.5 ease;
+}
+.yoli .yoli-icon img {
+  width: 80px !important;
+  height: 80px !important;
+  right: -150px;
+  cursor: pointer;
+}
+.yoli .yoli-bubble {
+  position: relative;
+  background: var(--brand);
+  border-radius: 0.4em;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 10px #222;
+  transition: all 0.5 ease;
+  cursor: pointer;
+}
+.yoli .yoli-bubble:hover {
+  box-shadow: 5px 5px 14px #111;
+  transition: all 0.5 ease;
+}
+.yoli .yoli-bubble:after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  width: 0;
+  height: 0;
+  border: 0.469em solid transparent;
+  border-top-color: var(--brand);
+  border-bottom: 0;
+  margin-left: -0.469em;
+  margin-bottom: -0.469em;
+}
+
+section#conoce-yolo p {
+  color: #333 !important;
+  font-family: var(--poppins);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.testimonials-section .carousel-item p {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: var(--monserrat);
+  line-height: 1.5rem;
+}
+
+#preguntas-frecuentes .card-body {
+  font-family: var(--poppins);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-section .phones {
+    width: 50% !important;
+    margin-top: -100px;
+    margin-left: 50% !important;
+  }
+
+  .faq-section .row {
+    width: 90% !important;
+    padding: 0 10% 8%;
+  }
+  .yoli {
+    right: 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hero-bg {
+    height: 110vh !important;
+  }
+
+  .testimonials-section h3 {
+    padding: 0 10px !important;
+    font-size: 1.5rem !important;
+  }
+
+  .section {
+    padding-bottom: 50px;
+  }
+
+  .hero-section .text1,
+  .hero-section .text2 {
+    font-size: 2rem !important;
+    margin-bottom: 15px !important;
+    line-height: 2.3rem !important;
+    margin-top: 20px !important;
+  }
+  .hero-section .phones {
+    width: 50% !important;
+    margin-top: -100px;
+    margin-left: 60% !important;
+  }
+
+  .feature-section h3 {
+    font-size: 2rem;
+    margin-bottom: 10px !important;
+  }
+
+  .feature-section {
+    padding-top: 50px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .feature-section .title {
+    margin-bottom: 20px !important;
+  }
+  .feature-section img {
+    width: 50% !important;
+  }
+  .feature-section .flechas {
+    display: none;
+  }
+
+  .feature2-section .card {
+    margin-bottom: 20px !important;
+    box-shadow: none !important;
+  }
+
+  .testimonials-section {
+    padding-top: 40px !important;
+    margin-top: -90px !important;
+    padding-bottom: 24rem !important;
+    z-index: 100 !important;
+  }
+  .testimonials-section .carousel-caption {
+    display: block !important;
+    left: -10% !important;
+    top: 60% !important;
+    padding: 0 20px !important;
+  }
+  .testimonials-section .carousel-control-next,
+  .testimonials-section .carousel-control-prev,
+  .testimonials-section .phones,
+  .circle {
+    display: none !important;
+  }
+  .testimonial-bg {
+    width: 190% !important;
+    top: -110%;
+    left: -46%;
+  }
+
+  .faq-section .row {
+    width: 100% !important;
+    padding: 0 10% 10%;
+  }
+
+  .yoli {
+    transform: scale(0.95);
+    right: 44%;
+  }
+  .yoli-bubble {
+    display: none;
+  }
+
+  .faq-section hr {
+    margin-left: 0 !important;
+  }
+
+  .testimonials-section .carousel-item img {
+    max-width: 130px !important;
+    top: -130px !important;
+  }
+
+  .footer {
+    text-align: center !important;
+  }
+
+  .footer .logo-marketplaces {
+    margin-bottom: 40px;
+  }
+}
+
+section#conoce-yolo h5 {
+  color: #6f24c6 !important;
+  font-family: var(--monserrat);
+  font-weight: 700 !important;
+  font-size: 1rem;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+.circle {
+  background: transparent;
+  border: 3rem solid var(--orange);
+  border-radius: 50%;
+  height: 40rem;
+  width: 30rem;
+  display: block;
+  position: absolute !important;
+  z-index: 1;
+}
+.circle1 {
+  top: 0;
+  left: -24rem;
+  z-index: 0;
+}
+.circle2 {
+  top: 100px;
+  right: -24rem;
+}
+.circle3 {
+  top: 10vh;
+  left: -24rem;
+}
+.circle4 {
+  top: -30vh;
+  right: -24rem;
+  z-index: 1;
 }
