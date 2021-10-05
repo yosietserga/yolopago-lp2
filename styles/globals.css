@@ -122,6 +122,9 @@ section {
 .feature-section .form-group {
   border-bottom: solid 1px #ccc;
 }
+.feature-section .form-group:last-child {
+  border-bottom: none;
+}
 .feature-section label {
   text-transform:uppercase;
   text-align: left;
