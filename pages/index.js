@@ -15,7 +15,7 @@ const Index = () => {
       <Header />
       <Feature />
       <Hero2 />
-
+      <section className="sendsms-section">
       <Row className="justify-content-center">
         <Col lg={12} md={12}>
           <div className="title text-center mb-5">
@@ -26,6 +26,7 @@ const Index = () => {
           </div>
         </Col>
       </Row>
+      </section>
 
       <Footer />
     </Layout>

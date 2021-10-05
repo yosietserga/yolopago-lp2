@@ -147,6 +147,7 @@ function loadScript(url, callback) {
   document.getElementsByTagName("head")[0].appendChild(script);
 
   const el2fx = [
+    /*
     {
       selector: ".circle2",
       queued: false,
@@ -157,6 +158,7 @@ function loadScript(url, callback) {
       queued: false,
       options: { factor: 30 },
     },
+    */
   ];
 
   const runFx = () => {

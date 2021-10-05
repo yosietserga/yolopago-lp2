@@ -40,11 +40,16 @@ export default function Feature(props) {
           <Col lg={12} md={12}>
             <div className="title text-center mb-5">
               <h3 className="font-weight-normal text-dark">
-                ¡Empieza a disfrutar Yolo Pago!
+                ¡Hola!
+                <br />
+                Alex, está a la espera de tu pago
               </h3>
             </div>
 
             <Form>
+              <h4 className="font-monserrat text-primary font-weight-medium f-14 mb-4 text1">
+                Datos de Transferencia
+              </h4>
               <FormGroup>
                 <Label for="titular">Títular</Label>
                 <Input
@@ -85,9 +90,9 @@ export default function Feature(props) {
                   onChange={handleMotivo}
                 />
               </FormGroup>
-              <br />
-              <button onClick={handleSubmit}>Aceptar</button>
             </Form>
+            <br />
+            <button onClick={handleSubmit}>Realizar Pago</button>
           </Col>
         </Row>
       </Container>
